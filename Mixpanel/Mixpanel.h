@@ -34,6 +34,10 @@
  */
 @interface Mixpanel : NSObject
 
+@property (nonatomic, strong) NSArray *surveys;
+@property (nonatomic, strong) NSMutableSet *shownSurveyCollections;
+
+
 /*!
  @property
 
@@ -182,6 +186,7 @@
  below for more information.
  */
 @property (atomic, weak) id<MixpanelDelegate> delegate; // allows fine grain control over uploading (optional)
+
 
 /*!
  @method
